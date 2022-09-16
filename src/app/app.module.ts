@@ -5,12 +5,14 @@ import { FormsModule } from '@angular/forms';
 
 //importing the server component we created
 import { ServerComponent } from './server/server.component';
+import { NestedComponent } from './nested/nested.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     //registering the server component
     ServerComponent,
+    NestedComponent,
   ],
   imports: [
     BrowserModule,
