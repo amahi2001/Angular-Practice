@@ -1,2 +1,6 @@
 <h3>This component contains a nested component</h3>
+<!-- allowing the button to be clicked after 2 secods via property binding -->
+<div class="row justify-content-center">
+    <button [disabled]="!allowNewServer" class="btn btn-primary" type="button">add server</button>
+</div>
 <app-server></app-server>
