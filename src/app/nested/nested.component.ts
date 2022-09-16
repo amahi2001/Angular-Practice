@@ -14,12 +14,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NestedComponent implements OnInit {
   allowNewServer: boolean = false;
+  serverCreationStatus: string = 'No server was created!';
 
   constructor() {
     //disabling the button after 2 seconds
     setTimeout(()=> {
       this.allowNewServer = true;
     }, 2000);
+  }
+
+  //function for event binding
+  onCreateServer() {
+    this.serverCreationStatus = 'Server was created!';
   }
 
   ngOnInit(): void {}
