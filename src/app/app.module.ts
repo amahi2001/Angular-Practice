@@ -6,6 +6,8 @@ import { FormsModule } from '@angular/forms';
 //importing the server component we created
 import { ServerComponent } from './server/server.component';
 import { NestedComponent } from './nested/nested.component';
+import { WarningAlertComponent } from './warning-alert/warning-alert.component';
+import { SuccesssAlertComponent } from './successs-alert/successs-alert.component';
 
 @NgModule({
   declarations: [
@@ -13,6 +15,8 @@ import { NestedComponent } from './nested/nested.component';
     //registering the server component
     ServerComponent,
     NestedComponent,
+    WarningAlertComponent,
+    SuccesssAlertComponent,
   ],
   imports: [
     BrowserModule,
