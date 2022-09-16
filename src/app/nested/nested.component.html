@@ -1,12 +1,17 @@
 <h3>This component contains a nested component</h3>
 <!-- allowing the button to be clicked after 2 secods via property binding -->
 <!-- clicking button will change server status via event binding -->
-<div class="row justify-content-center">
-  <button [disabled]="!allowNewServer" (click)="onCreateServer()" class="btn btn-primary" type="button">
-    add server
-  </button>
+<div class="row justify-content-center" (input)="onUpdateServerName($event)">
+    <input type="text" class="form-control">
 </div>
-
+<div class="row justify-content-center">
+    <p><strong>{{serverName}}</strong></p>
+</div>
+<div class="row justify-content-center">
+    <button [disabled]="!allowNewServer" (click)="onCreateServer()" class="btn btn-primary" type="button">
+        add server
+    </button>
+</div>
 <!-- setting text content via property binding -->
 <p [innerText]="allowNewServer"></p>
 <p>{{serverCreationStatus}}</p>

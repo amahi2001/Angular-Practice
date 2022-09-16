@@ -13,6 +13,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./nested.component.css'],
 })
 export class NestedComponent implements OnInit {
+  serverName = '';
   allowNewServer: boolean = false;
   serverCreationStatus: string = 'No server was created!';
 
@@ -26,6 +27,11 @@ export class NestedComponent implements OnInit {
   //function for event binding
   onCreateServer() {
     this.serverCreationStatus = 'Server was created!';
+  }
+
+  onUpdateServerName(event: Event){
+    // console.log(event);
+    this.serverName = (<HTMLInputElement> event.target).value;
   }
 
   ngOnInit(): void {}
