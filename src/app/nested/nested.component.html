@@ -3,4 +3,7 @@
 <div class="row justify-content-center">
     <button [disabled]="!allowNewServer" class="btn btn-primary" type="button">add server</button>
 </div>
+
+<!-- setting text content via property binding -->
+<p [innerText]="allowNewServer"></p>
 <app-server></app-server>
