@@ -9,5 +9,5 @@ import { Component } from '@angular/core';
 //this acts as args_to_template in the template
 export class AppComponent {
   title = 'Angular-Practice';
-  name = "";
+  name = "I'm the app component";
 }
