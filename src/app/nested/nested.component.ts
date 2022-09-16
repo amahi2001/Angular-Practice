@@ -1,7 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: '[app-nested]',
+  // selector: 'app-nested', //by element
+  // selector: '[app-nested]', //by attribute
+  selector: '.app-nested', //by class
+
   templateUrl: './nested.component.html',
   // template: `
   //   <h3>This component contains a nested component</h3>
