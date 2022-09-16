@@ -5,6 +5,7 @@ import { Component } from "@angular/core";
     selector : 'app-server',
     //which html file to use
     templateUrl : './server.component.html',
+    styleUrls : ['./server.component.css']
 })
 export class ServerComponent {
     name = 'the server component';
