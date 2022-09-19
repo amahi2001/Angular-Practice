@@ -1,18 +1,24 @@
 <h3>This component contains a nested component</h3>
 <!-- allowing the button to be clicked after 2 secods via property binding -->
 <!-- clicking button will change server status via event binding -->
-<div class="row justify-content-center" (input)="onUpdateServerName($event)">
-    <input type="text" class="form-control">
-</div>
 <div class="row justify-content-center">
-    <p><strong>{{serverName}}</strong></p>
+    <!-- !using event-Binding -->
+    <!-- <input type="text" class="form-control" (input)="onUpdateServerName($event)"> -->
+    <!-- !using 2 way Binding -->
+    <input type="text" class="form-control" [(ngModel)]="serverName">
 </div>
+<!-- <div class="row justify-content-center">
+    <p><strong>{{serverName}}</strong></p>
+</div> -->
 <div class="row justify-content-center">
     <button [disabled]="!allowNewServer" (click)="onCreateServer()" class="btn btn-primary" type="button">
         add server
     </button>
+    <!-- !setting text content via property binding --> 
+    <p [innerText]="allowNewServer"></p>
 </div>
-<!-- setting text content via property binding -->
-<p [innerText]="allowNewServer"></p>
-<p>{{serverCreationStatus}}</p>
+
+<!-- <p>{{serverCreationStatus}}</p> -->
+
+<p >Server was Created, server name is {{serverName}}</p>
 <app-server></app-server>
