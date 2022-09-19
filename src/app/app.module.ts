@@ -8,6 +8,7 @@ import { ServerComponent } from './server/server.component';
 import { NestedComponent } from './nested/nested.component';
 import { WarningAlertComponent } from './warning-alert/warning-alert.component';
 import { SuccesssAlertComponent } from './successs-alert/successs-alert.component';
+import { DisplayDetailsComponent } from './display-details/display-details.component';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import { SuccesssAlertComponent } from './successs-alert/successs-alert.componen
     NestedComponent,
     WarningAlertComponent,
     SuccesssAlertComponent,
+    DisplayDetailsComponent,
   ],
   imports: [
     BrowserModule,

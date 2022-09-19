@@ -1,0 +1,14 @@
+<div class="container">
+    <h3 style = "textAlign:center">Display Details Assignment</h3>
+  <div class="row justify-content-center">
+    <div class="col">
+      <button class="btn btn-primary" (click) = "onBtnClick()">display details</button>
+    </div>
+    <div class="col">
+        <p [ngStyle] = "getColor()"  *ngIf="display_details">password is {{password}}</p>
+    </div>
+    <div class="col">
+        <p>Button clicked {{click_log.length}} times</p>
+    </div>
+  </div>
+</div>
