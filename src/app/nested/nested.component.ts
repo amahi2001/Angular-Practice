@@ -26,7 +26,7 @@ export class NestedComponent implements OnInit {
 
   //function for event binding
   onCreateServer() {
-    this.serverCreationStatus = 'Server was created!';
+    this.serverCreationStatus = 'Server was created!: ' + this.serverName;
   }
 
   onUpdateServerName(event: Event){

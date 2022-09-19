@@ -1,15 +1,36 @@
-
 <!-- example of 2 way binding -->
 <div class="container">
-    <div class="row justify-content-center">
-        <input type="text" [(ngModel)]="name">
+  <div class="row justify-content-center">
+    <input type="text" [(ngModel)]="name" />
+  </div>
+  <div class="row justify-content-center">
+    <p>{{ name }}</p>
+  </div>
+</div>
+<br />
+
+<div class="container">
+  <div class="row justify-content-center">
+    <p>Username: {{ username }}</p>
+  </div>
+  <div class="row justify-content-center">
+    <div class="col">
+      <input type="text" [(ngModel)]="username" />
     </div>
-    <div class="row justify-content-center">
-        <p>{{name}}</p>
+    <div class="col">
+      <button
+        [disabled]="usernameIsEmpty()"
+        (click)="resetUsername()"
+        class="btn btn-primary"
+      >
+        clear username
+      </button>
     </div>
+  </div>
+  <div class="row justify-content-center"></div>
 </div>
 
-<hr>
+<hr />
 <!-- element selector -->
 <!-- <app-nested></app-nested> -->
 
@@ -19,8 +40,8 @@
 <!-- class selector -->
 <div class="app-nested"></div>
 
-<br>
-<hr>
+<br />
+<hr />
 
 <app-warning-alert></app-warning-alert>
 <app-successs-alert></app-successs-alert>
