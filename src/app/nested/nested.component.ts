@@ -17,6 +17,9 @@ export class NestedComponent implements OnInit {
   allowNewServer: boolean = false;
   serverCreationStatus: string = 'No server was created!';
 
+  //!for directives
+  server_created: boolean = false;
+
   constructor() {
     //disabling the button after 2 seconds
     setTimeout(()=> {
@@ -26,6 +29,7 @@ export class NestedComponent implements OnInit {
 
   //function for event binding
   onCreateServer() {
+    this.server_created = true;
     this.serverCreationStatus = 'Server was created!: ' + this.serverName;
   }
 
