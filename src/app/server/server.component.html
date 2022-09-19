@@ -7,7 +7,8 @@
     </div>
     <div class="row justify-content-center">
         <div class="col">
-            <h3>Server is {{getServerStatus()}}</h3>
+            <!-- !using ngStyle: allows us to dynamically update styles -->
+            <h3 [ngStyle] = "{backgroundColor: getColor()}">Server is {{getServerStatus()}}</h3>
         </div>
     </div>
     <div class="row justify-content-center">
