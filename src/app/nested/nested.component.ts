@@ -17,6 +17,8 @@ export class NestedComponent implements OnInit {
   allowNewServer: boolean = false;
   serverCreationStatus: string = 'No server was created!';
 
+  servers: Array<string> = ['TestServer']
+
   //!for directives
   server_created: boolean = false;
 
@@ -30,6 +32,7 @@ export class NestedComponent implements OnInit {
   //function for event binding
   onCreateServer() {
     this.server_created = true;
+    this.servers.push(this.serverName);
     this.serverCreationStatus = 'Server was created!: ' + this.serverName;
   }
 
