@@ -11,8 +11,9 @@ export class DisplayDetailsComponent implements OnInit {
 
   display_details: boolean = false;
   color_toggle: boolean = false;
-  password: string = 'tunafish123'
-  click_log: Array<number> = []
+  password: string = 'tunafish123';
+  click_log: Array<number> = [];
+  dates: Array<string> = [];
 
   constructor() {
   }
@@ -21,6 +22,7 @@ export class DisplayDetailsComponent implements OnInit {
     this.display_details = true;
     this.color_toggle = !this.color_toggle;
     this.click_log.push(this.click_log.length);
+    this.dates.push(new Date().toString());
   }
 
   getColor(): Record<string, string> {

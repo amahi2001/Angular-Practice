@@ -10,5 +10,11 @@
     <div class="col">
         <p>Button clicked {{click_log.length}} times</p>
     </div>
+    <!-- getting index with ngFor -->
+    <div class="col">
+      <p *ngFor="let date of dates; let idx = index">
+        {{date}}, index {{idx}}
+      </p>
+    </div>
   </div>
 </div>
