@@ -1,0 +1,11 @@
+.container{
+    border: solid black; 
+}
+
+.col{
+    border: solid blue; 
+}
+
+.row{
+    border: solid red;
+}
