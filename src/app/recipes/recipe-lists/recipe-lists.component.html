@@ -1,34 +1,28 @@
-<!-- !inside of a col -->
-
 <div class="row">
   <div class="col">
-    <button class="btn btn-success">New-Recipe</button>
+    <button class="btn btn-primary">New-Recipe</button>
   </div>
 </div>
 <hr />
 <!-- displaying recipes -->
-<div
-  class="row justify-content-center"
-  *ngFor="let recipe of recipe_list"
-  style="border: solid black"
->
-  <div class="col">
-    <div class="row">
-      <a href="#">
-        <h4>{{ recipe.name }}</h4>
-      </a>
+<div class="row" *ngFor="let recipe of recipe_list" id="recipe-card">
+  <div class="card mb-3">
+    <div class="row no-gutters">
+      <div class="col">
+        <img
+          class="img-fluid"
+          [src]="recipe.imagePath"
+          alt="..."
+          style="max-height: 150px"
+        />
+      </div>
+      <div class="col">
+        <div class="card-body">
+          <h5 class="card-title">{{ recipe.name }}</h5>
+          <p class="card-text">{{ recipe.description }}</p>
+        </div>
+      </div>
     </div>
-    <div class="row">
-      <p>{{ recipe.description }}</p>
-    </div>
-  </div>
-  <div class="col">
-    <img
-      [src]="recipe.imagePath"
-      alt=""
-      class="img-responsive"
-      style="max-height: 70px"
-    />
   </div>
 </div>
 
