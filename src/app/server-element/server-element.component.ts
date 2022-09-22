@@ -10,10 +10,10 @@ export class ServerElementComponent implements OnInit {
   /* 
   ! -defining an property called element => 
   !we will use this later to propety bind
-  ! -the @Input() decorator allows to parent components to access 
-  !this property (appComponent) 
+  ! -the @Input('property alias for template') decorator 
+  !allows to parent components to access this property (appComponent) 
   */
-  @Input() element: {type: string, name:string, content:string}
+  @Input('srvElement') element: {type: string, name:string, content:string}
 
   constructor() { }
 
